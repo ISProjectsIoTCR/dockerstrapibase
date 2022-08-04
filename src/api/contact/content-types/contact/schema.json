@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contacts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Telephone": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean"
+    },
+    "Uid": {
+      "type": "uid"
+    },
+    "Account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "Contacts"
+    },
+    "Profession": {
+      "type": "string"
+    }
+  }
+}

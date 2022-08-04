@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchases",
+  "info": {
+    "singularName": "purchase",
+    "pluralName": "purchases",
+    "displayName": "Purchases",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Uid": {
+      "type": "uid"
+    },
+    "Account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "Purchases"
+    },
+    "Items": {
+      "type": "json"
+    },
+    "Notes": {
+      "type": "richtext"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Agree": {
+      "type": "boolean"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true
+    },
+    "Project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    }
+  }
+}

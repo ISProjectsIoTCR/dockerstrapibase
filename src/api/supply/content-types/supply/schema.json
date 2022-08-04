@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplies",
+  "info": {
+    "singularName": "supply",
+    "pluralName": "supplies",
+    "displayName": "Supplies"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Slug": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Cost": {
+      "type": "string"
+    },
+    "AcquisitionDate": {
+      "type": "string"
+    },
+    "Available": {
+      "type": "boolean"
+    },
+    "Owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::account.account"
+    },
+    "Responsible": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Manufacturer": {
+      "type": "string"
+    },
+    "Size": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "DataSheet": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Expiration": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Quantity": {
+      "type": "string"
+    },
+    "DoseList": {
+      "type": "json"
+    },
+    "Experiences": {
+      "type": "json"
+    }
+  }
+}

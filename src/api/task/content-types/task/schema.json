@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "Tasks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Slug": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean"
+    },
+    "Commitment": {
+      "type": "date"
+    },
+    "Deadline": {
+      "type": "date"
+    },
+    "assigned_to": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tasks"
+    },
+    "Project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "Tasks"
+    },
+    "diagnostics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::diagnostic.diagnostic",
+      "mappedBy": "task"
+    }
+  }
+}

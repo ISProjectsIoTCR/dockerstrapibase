@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diagnostics",
+  "info": {
+    "singularName": "diagnostic",
+    "pluralName": "diagnostics",
+    "displayName": "Diagnostics",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Comment": {
+      "type": "richtext"
+    },
+    "StartDate": {
+      "type": "string"
+    },
+    "FinishDate": {
+      "type": "string"
+    },
+    "task": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::task.task",
+      "inversedBy": "diagnostics"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "diagnostics"
+    },
+    "Workedhours": {
+      "type": "string"
+    },
+    "Project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "Supplies": {
+      "type": "json"
+    },
+    "FinishTime": {
+      "type": "string"
+    },
+    "StartTime": {
+      "type": "string"
+    }
+  }
+}
