@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "web_pages",
+  "info": {
+    "singularName": "web-page",
+    "pluralName": "web-pages",
+    "displayName": "WebPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Whatsapp": {
+      "type": "string"
+    },
+    "WhatsappLink": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Maps": {
+      "type": "text"
+    },
+    "Telephone": {
+      "type": "string"
+    }
+  }
+}
