@@ -86,6 +86,10 @@
       "relation": "oneToMany",
       "target": "api::project.project",
       "mappedBy": "Leader"
+    },
+    "Uid": {
+      "type": "uid",
+      "required": true
     }
   }
 }
