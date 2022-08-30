@@ -55,6 +55,12 @@
       "relation": "oneToMany",
       "target": "api::purchase.purchase",
       "mappedBy": "Account"
+    },
+    "harvests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::harvest.harvest",
+      "mappedBy": "account"
     }
   }
 }

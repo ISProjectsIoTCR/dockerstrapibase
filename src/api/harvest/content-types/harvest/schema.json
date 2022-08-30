@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "harvests",
+  "info": {
+    "singularName": "harvest",
+    "pluralName": "harvests",
+    "displayName": "Harvest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Uid": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Area": {
+      "type": "string"
+    },
+    "Altitude": {
+      "type": "string"
+    },
+    "TotalPlants": {
+      "type": "string"
+    },
+    "LastHarvest": {
+      "type": "string"
+    },
+    "DistRows": {
+      "type": "string"
+    },
+    "DistPlant": {
+      "type": "string"
+    },
+    "FloweringDate": {
+      "type": "string"
+    },
+    "FloweringDetails": {
+      "type": "json"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "harvests"
+    },
+    "DoublePlant": {
+      "type": "boolean",
+      "default": true
+    },
+    "Variety": {
+      "type": "string"
+    },
+    "PruningPercentage": {
+      "type": "string"
+    },
+    "Test": {
+      "type": "json"
+    }
+  }
+}
