@@ -4,7 +4,8 @@
   "info": {
     "singularName": "supply",
     "pluralName": "supplies",
-    "displayName": "Supplies"
+    "displayName": "Supplies",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -43,24 +44,26 @@
       "type": "string"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "DataSheet": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Expiration": {
       "type": "string"
@@ -76,6 +79,13 @@
     },
     "Experiences": {
       "type": "json"
+    },
+    "Dose": {
+      "type": "decimal",
+      "default": 0
+    },
+    "Measurement": {
+      "type": "string"
     }
   }
 }
