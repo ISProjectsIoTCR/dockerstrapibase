@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diseases",
+  "info": {
+    "singularName": "disease",
+    "pluralName": "diseases",
+    "displayName": "Diseases",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Uid": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Comment": {
+      "type": "richtext"
+    },
+    "Date": {
+      "type": "string"
+    },
+    "Project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "NumberPlants": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "Supplies": {
+      "type": "json"
+    },
+    "TaskID": {
+      "type": "string"
+    },
+    "Agree": {
+      "type": "boolean"
+    }
+  }
+}
